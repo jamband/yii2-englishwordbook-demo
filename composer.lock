@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "03f7b17d011a3de6ac1752e0af6bc937",
+    "hash": "d668d67a4509438b37e688bb9e68ba4c",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -415,16 +415,16 @@
         },
         {
             "name": "yiisoft/jquery",
-            "version": "1.10.2",
+            "version": "1.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/jquery.git",
-                "reference": "52b005d9ffb9b1900d05f76960798402b8b40f91"
+                "reference": "70dc43e0b09a96def71c41f308012bcdb82f5412"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/jquery/zipball/52b005d9ffb9b1900d05f76960798402b8b40f91",
-                "reference": "52b005d9ffb9b1900d05f76960798402b8b40f91",
+                "url": "https://api.github.com/repos/yiisoft/jquery/zipball/70dc43e0b09a96def71c41f308012bcdb82f5412",
+                "reference": "70dc43e0b09a96def71c41f308012bcdb82f5412",
                 "shasum": ""
             },
             "type": "library",
@@ -434,7 +434,7 @@
             ],
             "description": "jQuery JavaScript Library",
             "homepage": "http://jquery.com",
-            "time": "2013-11-06 00:14:38"
+            "time": "2014-05-07 05:00:03"
         },
         {
             "name": "yiisoft/yii2",

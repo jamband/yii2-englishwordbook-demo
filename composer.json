@@ -9,8 +9,8 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": "2.0.1",
         "yiisoft/yii2-bootstrap": "2.0.1",
-        "yiisoft/jquery": "1.10.*",
-        "bower-asset/bootstrap-hover-dropdown": "*",
+        "yiisoft/jquery": "~1.11",
+        "bower-asset/bootstrap-hover-dropdown": "2.0.11",
         "odaialali/yii2-toastr": "dev-master"
     },
     "require-dev": {
@@ -18,7 +18,7 @@
         "yiisoft/yii2-debug": "2.0.1",
         "yiisoft/yii2-gii": "2.0.1",
         "yiisoft/yii2-faker": "2.0.1",
-        "codeception/codeception": "2.0.*",
+        "codeception/codeception": "2.0.9",
         "jamband/yii2-schemadump": "dev-master"
     },
     "config": {
