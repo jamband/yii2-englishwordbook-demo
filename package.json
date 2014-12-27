@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "less": "gulp less",
+    "clean": "gulp clean"
+  },
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-less": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-shell": "latest",
+    "gulp-uglify": "latest"
+  }
+}
