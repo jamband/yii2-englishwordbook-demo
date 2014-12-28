@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $pages yii\data\Pagination */
+/* @var $pagination yii\data\Pagination */
 /* @var $words app\models\Word */
 
 use yii\helpers\Html;
