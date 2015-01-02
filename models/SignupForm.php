@@ -34,7 +34,7 @@ class SignupForm extends Model
     {
         return [
             // username
-            ['username', 'match', 'pattern' => '/^[a-zA-Z0-9_]{4,20}$/', 'skipOnEmpty' => false,
+            ['username', 'match', 'pattern' => '/^[a-zA-Z0-9\_]{4,20}$/', 'skipOnEmpty' => false,
                 'message' => '{attribute}が正しくありません。',
             ],
             ['username', 'unique', 'targetClass' => 'app\models\User',
@@ -48,7 +48,7 @@ class SignupForm extends Model
             ],
 
             // password
-            ['password', 'match', 'pattern' => '/^[a-zA-Z0-9_]{8,60}$/', 'skipOnEmpty' => false,
+            ['password', 'match', 'pattern' => '/^[a-zA-Z0-9\_]{8,60}$/', 'skipOnEmpty' => false,
                 'message' => '{attribute}が正しくありません。',
             ],
 
