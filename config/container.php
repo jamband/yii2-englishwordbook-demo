@@ -18,11 +18,9 @@ $container->set('yii\widgets\LinkPager', [
     'maxButtonCount' => 5,
 ]);
 
-
-// yii\widgets
+// odaialali\yii2toastr
 $container->set('odaialali\yii2toastr\ToastrFlash', [
     'options' => [
         'timeOut' => 3600,
     ],
 ]);
-
