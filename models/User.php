@@ -13,6 +13,8 @@ use yii\web\IdentityInterface;
  */
 class User extends ActiveRecord implements IdentityInterface
 {
+    const PASSWORD_HASH_COST = 10;
+
     /**
      * @inheritdoc
      */
@@ -89,7 +91,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function setPassword($password)
     {
-        $this->password = Yii::$app->security->generatePasswordHash($password, 10);
+        $this->password = Yii::$app->security->generatePasswordHash($password, self::PASSWORD_HASH_COST);
     }
 
     /**
