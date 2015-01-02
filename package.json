@@ -1,8 +1,10 @@
 {
   "scripts": {
     "start": "gulp",
+    "font": "gulp font",
+    "js": "gulp js",
+    "style": "gulp style",
     "build": "gulp build",
-    "less": "gulp less",
     "clean": "gulp clean"
   },
   "devDependencies": {
