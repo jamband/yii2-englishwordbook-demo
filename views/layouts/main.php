@@ -77,7 +77,7 @@ CommonAsset::register($this);
 <?php $this->endBody() ?>
 <?php if (YII_ENV_DEV): ?>
     <script type='text/javascript' id="__bs_script__">//<![CDATA[
-        document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.8.2.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
+        document.write("<script async src='//HOST:3000/browser-sync/browser-sync-client.1.9.0.js'><\/script>".replace(/HOST/g, location.hostname).replace(/PORT/g, location.port));
     //]]></script>
 <?php endif; ?>
 </body>
