@@ -30,11 +30,11 @@ $this->title = 'Home - ' . Yii::$app->name;
 
     <div class="text-right">
          <span class="label label-info"><?= Html::encode($pagination->totalCount) ?> results</span>
-    </div><!-- /.text-right -->
+    </div>
 
     <div class="text-center">
         <?= LinkPager::widget(compact('pagination')) ?>
-    </div><!-- /.text-center -->
+    </div>
 
     <div class="words">
         <?php foreach ($words as $word): ?>
@@ -51,7 +51,7 @@ $this->title = 'Home - ' . Yii::$app->name;
             ]]) ?>
             <br>
         <?php endforeach; ?>
-    </div><!-- /.words -->
+    </div>
 <?php Pjax::end() ?>
 
 <p class="clearfix"></p>
@@ -69,8 +69,8 @@ $this->title = 'Home - ' . Yii::$app->name;
                         'id' => 'word-search',
                         'class' => 'btn btn-primary',
                     ]) ?>
-                </span><!-- /.input-group-btn -->
-            </div><!-- /.input-group -->
+                </span>
+            </div>
         <?= Html::endForm() ?>
-    </div><!-- /.col -->
-</div><!-- /.row -->
+    </div>
+</div>

@@ -35,9 +35,9 @@ $this->title = 'Singup - ' . Yii::$app->name;
             ?>
             <div class="form-group">
                 <?= Html::submitButton('登録', ['class' => 'btn btn-primary']) ?>
-            </div><!-- /.form-group -->
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+            </div>
+        </div>
+    </div>
 <?php ActiveForm::end() ?>
 
 <div class="panel panel-default">
@@ -46,5 +46,5 @@ $this->title = 'Singup - ' . Yii::$app->name;
         admin, demo というユーザが予め用意されログイン時に利用できますが、新しくユーザ登録することも可能です。
         動作を確認したい方は、適当なユーザ名、メールアドレス、パスワードを入力してお使い下さい。
         アクティベーションなどは実装していませんので、メール送信などはされず、直でユーザ登録される挙動になっています。
-    </div><!-- /.panel-body -->
-</div><!-- /.panel -->
+    </div>
+</div>

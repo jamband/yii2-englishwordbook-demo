@@ -20,4 +20,4 @@ $this->title = $name . ' - ' . Yii::$app->name;
 
 <div class="alert alert-danger">
     <?= nl2br(Html::encode($message)) ?>
-</div><!-- /.alert -->
+</div>

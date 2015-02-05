@@ -12,6 +12,6 @@ array_push($sorts, 'az', 'za', 'new', 'old', 'rnd');
     <?php foreach ($sorts as $sort): ?>
         <?= Html::a(Html::encode($sort), ['index', 'sort' => $sort]) ?>
     <?php endforeach; ?>
-</div><!-- /.pull-left -->
+</div>
 
 <p class="clearfix"></p>

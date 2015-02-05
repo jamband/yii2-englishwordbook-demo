@@ -17,12 +17,12 @@ $this->title = 'Login - ' . Yii::$app->name;
             <?= $form->field($loginForm, 'username') ?>
             <?= $form->field($loginForm, 'password')->passwordInput() ?>
             <?= $form->field($loginForm, 'rememberMe')->checkbox() ?>
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+        </div>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton('ログイン', ['class' => 'btn btn-primary']) ?>
-    </div><!-- /.form-group -->
+    </div>
 <?php ActiveForm::end(); ?>
 
 <div class="panel panel-default">
@@ -32,5 +32,5 @@ $this->title = 'Login - ' . Yii::$app->name;
         <?= Html::encode($loginForm->getAttributeLabel('password')) ?>: adminadmin |
         <?= Html::encode($loginForm->getAttributeLabel('username')) ?>: demo
         <?= Html::encode($loginForm->getAttributeLabel('password')) ?>: demodemo
-    </div><!-- /.panel-body -->
-</div><!-- /.panel -->
+    </div>
+</div>

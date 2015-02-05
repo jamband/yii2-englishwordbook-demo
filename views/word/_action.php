@@ -25,4 +25,4 @@ use yii\helpers\Html;
             'items' => $items,
         ],
     ]) ?>
-</div><!-- /.pull-right -->
+</div>

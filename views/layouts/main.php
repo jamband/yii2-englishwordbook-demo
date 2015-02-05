@@ -62,8 +62,8 @@ CommonAsset::register($this);
 
     <div class="container">
         <?= $content ?>
-    </div><!-- /.container -->
-</div><!-- /.wrap -->
+    </div>
+</div>
 
 <footer class="footer">
     <div class="text-center">
@@ -71,8 +71,8 @@ CommonAsset::register($this);
         <?= Yii::powered() ?>
         version: <?= Yii::getVersion() ?>
         mode: <?= YII_ENV ?>
-    </div><!-- /.text-center -->
-</footer><!-- /.footer -->
+    </div>
+</footer>
 <?php $this->endBody() ?>
 <?php if (YII_ENV_DEV): ?>
     <script type='text/javascript' id="__bs_script__">//<![CDATA[

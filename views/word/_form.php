@@ -13,12 +13,12 @@ use yii\helpers\Html;
         <div class="col-sm-8">
             <?= $form->field($word, 'en')->textInput(['maxlength' => 64]) ?>
             <?= $form->field($word, 'ja')->textInput(['maxlength' => 64]) ?>
-        </div><!-- /.col -->
-    </div><!-- /.row -->
+        </div>
+    </div>
 
     <div class="form-group">
         <?= Html::submitButton($word->isNewRecord ? '登録する' : '更新する', [
             'class' => 'btn btn-primary',
         ]) ?>
-    </div><!-- /.form-group -->
+    </div>
 <?php ActiveForm::end(); ?>
