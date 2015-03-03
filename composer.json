@@ -18,7 +18,7 @@
         "yiisoft/yii2-debug": "2.0.3",
         "yiisoft/yii2-gii": "2.0.3",
         "yiisoft/yii2-faker": "2.0.3",
-        "codeception/codeception": "2.0.9",
+        "codeception/codeception": "2.0.11",
         "jamband/yii2-schemadump": "dev-master"
     },
     "config": {
