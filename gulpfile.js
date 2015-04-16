@@ -16,7 +16,7 @@ gulp.task('font', function() {
 // js
 gulp.task('js', function() {
   gulp.src([
-    './vendor/yiisoft/jquery/jquery.min.js',
+    './vendor/bower/jquery/dist/jquery.min.js',
     './vendor/bower/bootstrap/dist/js/bootstrap.min.js',
     './vendor/yiisoft/yii2/assets/**/*.js',
     './vendor/bower/yii2-pjax/jquery.pjax.js',
