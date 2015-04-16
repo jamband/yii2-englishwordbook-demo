@@ -12,9 +12,9 @@ use yii\bootstrap\ButtonDropdown;
 
 // twbs popover
 $this->registerJs(<<<'JS'
-$('[data-toggle="popover"]').popover('hide');
+$('[data-toggle="popover"]').popover();
 $(document).ajaxComplete(function() {
-    $('[data-toggle="popover"]').popover('hide');
+    $('[data-toggle="popover"]').popover();
 });
 JS
 );
