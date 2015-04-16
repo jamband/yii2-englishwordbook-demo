@@ -37,6 +37,7 @@ $config = [
                 'yii\widgets\PjaxAsset' => false,
                 'yii\widgets\ActiveFormAsset' => false,
                 'yii\validators\ValidationAsset' => false,
+                'odaialali\yii2toastr\ToastrAsset' => false,
             ],
         ],
         'log' => [
