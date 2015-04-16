@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "start": "gulp",
     "font": "gulp font",
@@ -8,17 +9,17 @@
     "clean": "gulp clean"
   },
   "devDependencies": {
-    "browser-sync": "latest",
-    "del": "latest",
-    "gulp": "latest",
-    "gulp-load-plugins": "latest",
-    "gulp-autoprefixer": "latest",
-    "gulp-concat": "latest",
-    "gulp-minify-css": "latest",
-    "gulp-less": "latest",
-    "gulp-plumber": "latest",
-    "gulp-rename": "latest",
-    "gulp-shell": "latest",
-    "gulp-uglify": "latest"
+    "browser-sync": "*",
+    "del": "*",
+    "gulp": "*",
+    "gulp-load-plugins": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-minify-css": "*",
+    "gulp-less": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-shell": "*",
+    "gulp-uglify": "*"
   }
 }
