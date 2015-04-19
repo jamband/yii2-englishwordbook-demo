@@ -44,7 +44,7 @@ $this->title = 'Home - ' . Yii::$app->name;
                 'data-toggle' => 'popover',
                 'data-trigger' => 'hover',
             ]) ?>
-            <?= Html::a('Update', ['update', 'id' => $word->id]) ?>
+            <?= Html::a('Update', ['update', 'id' => $word->id], ['data-pjax' => '0']) ?>
             <?= Html::a('Delete', ['delete', 'id' => $word->id], ['data' => [
                 'confirm' => Yii::$app->params['confirmDelete'],
                 'method' => 'post',
