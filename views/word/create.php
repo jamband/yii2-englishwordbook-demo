@@ -5,7 +5,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Create Word - ' . Yii::$app->name;
+$this->title = 'Create Word';
 ?>
 
 <?= $this->render('_action', ['items' => [
