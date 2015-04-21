@@ -36,11 +36,8 @@ class LoginForm extends Model
     public function rules()
     {
         return [
-            // username, password
             [['username', 'password'], 'validatePassword', 'skipOnEmpty' => false],
-
-            // rememberMe
-            ['rememberMe', 'boolean'],
+            [['rememberMe'], 'boolean'],
         ];
     }
 

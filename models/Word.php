@@ -33,13 +33,9 @@ class Word extends ActiveRecord
     public function rules()
     {
         return [
-            // en
-            ['en', 'required'],
-            ['en', 'string', 'max' => 50],
-
-            // ja
-            ['ja', 'required'],
-            ['ja', 'string', 'max' => 50],
+            [['en', 'ja'], 'required'],
+            [['en', 'ja'], 'trim'],
+            [['en', 'ja'], 'string', 'max' => 50],
         ];
     }
 

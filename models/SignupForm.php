@@ -33,26 +33,19 @@ class SignupForm extends Model
     public function rules()
     {
         return [
-            // username
             ['username', 'match', 'pattern' => '/^[a-zA-Z0-9\_]{4,20}$/', 'skipOnEmpty' => false,
                 'message' => '{attribute}が正しくありません。',
             ],
             ['username', 'unique', 'targetClass' => 'app\models\User',
                 'message' => 'その{attribute}はご利用になれません。',
             ],
-
-            // email
             ['email', 'email', 'skipOnEmpty' => false],
             ['email', 'unique', 'targetClass' => 'app\models\User',
                 'message' => 'その{attribute}はご利用になれません。',
             ],
-
-            // password
             ['password', 'match', 'pattern' => '/^[a-zA-Z0-9\_]{8,60}$/', 'skipOnEmpty' => false,
                 'message' => '{attribute}が正しくありません。',
             ],
-
-            // password_repeat
             ['password_repeat', 'required'],
             ['password_repeat', 'compare', 'compareAttribute' => 'password'],
         ];
