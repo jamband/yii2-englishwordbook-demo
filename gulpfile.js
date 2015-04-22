@@ -10,7 +10,7 @@ gulp.task('font', function() {
   gulp.src([
       './vendor/bower/bootstrap/dist/fonts/*'
   ])
-    .pipe(gulp.dest('./assets/common/fonts'));
+    .pipe(gulp.dest('./assets/public/fonts'));
 });
 
 // js
@@ -25,13 +25,13 @@ gulp.task('js', function() {
   ])
     .pipe($.concat('common.js'))
     .pipe($.uglify({preserveComments: 'some'}))
-    .pipe(gulp.dest('./assets/common/js'));
+    .pipe(gulp.dest('./assets/public/js'));
 });
 
 // style
 gulp.task('style', function() {
   gulp.src([
-    './assets/less/styles.less',
+    './assets/less/_.less',
     './vendor/bower/toastr/toastr.min.css',
   ])
     .pipe($.plumber())
@@ -39,7 +39,7 @@ gulp.task('style', function() {
     .pipe($.concat('common.css'))
     .pipe($.autoprefixer('last 2 version', 'ie 8'))
     .pipe($.minifyCss())
-    .pipe(gulp.dest('./assets/common/css'))
+    .pipe(gulp.dest('./assets/public/css'))
     .pipe(reload({stream: true, once: true}));
 });
 

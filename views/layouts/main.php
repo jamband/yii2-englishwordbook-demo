@@ -6,7 +6,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use app\assets\CommonAsset;
+use app\assets\bundles\CommonAsset;
 use app\widgets\Alert;
 use odaialali\yii2toastr\ToastrFlash;
 
@@ -30,38 +30,36 @@ CommonAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => Html::encode(Yii::$app->name),
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar navbar-default',
+<?php
+NavBar::begin([
+    'brandLabel' => Html::encode(Yii::$app->name),
+    'brandUrl' => Yii::$app->homeUrl,
+    'options' => [
+        'class' => 'navbar navbar-default',
+    ],
+]);
+/* @var $user yii\web\User */
+$user = Yii::$app->user;
+$username = !$user->isGuest ? $user->identity->username : '';
+echo Nav::widget([
+    'options' => ['class' => 'navbar-nav navbar-right'],
+    'items' => [
+        ['label' => 'Home', 'url' => ['/word/index']],
+        ['label' => 'About', 'url' => ['/site/about']],
+        ['label' => 'Signup', 'url' => ['/site/signup'], 'visible' => $user->isGuest],
+        ['label' => 'Login', 'url' => ['/site/login'], 'visible' => $user->isGuest],
+        ['label' => "Logout ($username)", 'url' => ['/site/logout'], 'visible' => !$user->isGuest,
+            'linkOptions' => ['data-method' => 'post'],
         ],
-    ]);
-    /* @var $user yii\web\User */
-    $user = Yii::$app->user;
-    $username = !$user->isGuest ? $user->identity->username : '';
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/word/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Signup', 'url' => ['/site/signup'], 'visible' => $user->isGuest],
-            ['label' => 'Login', 'url' => ['/site/login'], 'visible' => $user->isGuest],
-            ['label' => "Logout ($username)", 'url' => ['/site/logout'], 'visible' => !$user->isGuest,
-                'linkOptions' => ['data-method' => 'post'],
-            ],
-        ],
-    ]);
-    NavBar::end();
-    ?>
+    ],
+]);
+NavBar::end();
+?>
 
-    <?= ToastrFlash::widget() ?>
+<?= ToastrFlash::widget() ?>
 
-    <div class="container">
-        <?= $content ?>
-    </div>
+<div class="container">
+    <?= $content ?>
 </div>
 
 <footer class="footer">
