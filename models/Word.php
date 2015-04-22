@@ -66,17 +66,6 @@ class Word extends ActiveRecord
     /**
      * @inheritdoc
      */
-    public function beforeValidate()
-    {
-        $this->en = TextCleaner::trim($this->en);
-        $this->ja = TextCleaner::trim($this->ja);
-
-        return parent::beforeValidate();
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function behaviors()
     {
         return [

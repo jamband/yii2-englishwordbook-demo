@@ -28,6 +28,11 @@ class WordTest extends TestCase
         $word->en = 'a';
         $this->assertTrue($word->validate(['en']));
 
+        // trim
+        $word->en = ' a ';
+        $word->validate(['en']);
+        $this->assertSame('a', $word->en);
+
         // string: max
         $word->en = str_repeat('a', 51);
         $this->assertFalse($word->validate(['en']));
@@ -47,6 +52,11 @@ class WordTest extends TestCase
 
         $word->ja = 'あ';
         $this->assertTrue($word->validate(['ja']));
+
+        // trim
+        $word->ja = ' あ ';
+        $word->validate(['ja']);
+        $this->assertSame('あ', $word->ja);
 
         // string: max
         $word->ja = str_repeat('あ', 51);
@@ -105,16 +115,5 @@ class WordTest extends TestCase
             ['at', '2', 2],
             ['べる', '1', 4],
         ];
-    }
-
-    public function testBeforeValidate()
-    {
-        $word = new Word([
-            'en' => ' a ',
-            'ja' => '　あ　',
-        ]);
-        $this->assertTrue($word->validate());
-        $this->assertSame('a', $word->en);
-        $this->assertSame('あ', $word->ja);
     }
 }
