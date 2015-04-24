@@ -31,15 +31,6 @@ $config = [
         'assetManager' => [
             'linkAssets' => true,
             'bundles' => false,
-            // 'bundles' => [
-                // 'yii\web\JqueryAsset' => false,
-                // 'yii\bootstrap\BootstrapAsset' => false,
-                // 'yii\bootstrap\BootstrapPluginAsset' => false,
-                // 'yii\widgets\PjaxAsset' => false,
-                // 'yii\widgets\ActiveFormAsset' => false,
-                // 'yii\validators\ValidationAsset' => false,
-                // 'odaialali\yii2toastr\ToastrAsset' => false,
-            // ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
