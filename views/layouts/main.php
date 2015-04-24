@@ -7,7 +7,6 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use app\widgets\Alert;
 use odaialali\yii2toastr\ToastrFlash;
 
 $user = Yii::$app->user;
