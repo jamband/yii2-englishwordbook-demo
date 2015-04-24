@@ -16,12 +16,12 @@ gulp.task('font', function() {
 // js
 gulp.task('js', function() {
   gulp.src([
-    'vendor/bower/jquery/dist/jquery.min.js',
-    'vendor/bower/bootstrap/dist/js/bootstrap.min.js',
+    'vendor/bower/jquery/dist/jquery.js',
+    'vendor/bower/bootstrap/dist/js/bootstrap.js',
     'vendor/yiisoft/yii2/assets/**/*.js',
     'vendor/bower/yii2-pjax/jquery.pjax.js',
-    'vendor/bower/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js',
-    'vendor/bower/toastr/toastr.min.js',
+    'vendor/bower/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js',
+    'vendor/bower/toastr/toastr.js',
   ])
     .pipe($.concat('common.js'))
     .pipe($.uglify({preserveComments: 'some'}))
@@ -32,7 +32,7 @@ gulp.task('js', function() {
 gulp.task('style', function() {
   gulp.src([
     'assets/less/_.less',
-    'vendor/bower/toastr/toastr.min.css',
+    'vendor/bower/toastr/toastr.css',
   ])
     .pipe($.plumber())
     .pipe($.less())
