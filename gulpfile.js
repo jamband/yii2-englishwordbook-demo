@@ -10,7 +10,7 @@ gulp.task('font', function() {
   gulp.src([
       'vendor/bower/bootstrap/dist/fonts/*'
   ])
-    .pipe(gulp.dest('assets/public/fonts'));
+    .pipe(gulp.dest('web/fonts'));
 });
 
 // js
@@ -25,7 +25,7 @@ gulp.task('js', function() {
   ])
     .pipe($.concat('common.js'))
     .pipe($.uglify({preserveComments: 'some'}))
-    .pipe(gulp.dest('assets/public/js'));
+    .pipe(gulp.dest('web/js'));
 });
 
 // style
@@ -39,7 +39,7 @@ gulp.task('style', function() {
     .pipe($.concat('common.css'))
     .pipe($.autoprefixer('last 2 version', 'ie 8'))
     .pipe($.minifyCss())
-    .pipe(gulp.dest('assets/public/css'))
+    .pipe(gulp.dest('web/css'))
     .pipe(reload({stream: true, once: true}));
 });
 

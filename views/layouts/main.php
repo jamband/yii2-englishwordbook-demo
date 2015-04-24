@@ -2,15 +2,16 @@
 
 /* @var $this yii\web\View */
 /* @var $content string */
+/* @var $user yii\web\User */
 
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use app\assets\bundles\CommonAsset;
 use app\widgets\Alert;
 use odaialali\yii2toastr\ToastrFlash;
 
-CommonAsset::register($this);
+$user = Yii::$app->user;
+$username = !$user->isGuest ? $user->identity->username : '';
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -19,9 +20,10 @@ CommonAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title . ' - ' . Yii::$app->name) ?></title>
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <?= Html::csrfMetaTags() ?>
+    <?= Html::cssFile('@web/css/common.css?v=' . filemtime(Yii::getAlias('@webroot/css/common.css'))) ?>
+    <?= Html::cssFile('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') ?>
     <?php $this->head() ?>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -30,46 +32,43 @@ CommonAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<?php
-NavBar::begin([
-    'brandLabel' => Html::encode(Yii::$app->name),
-    'brandUrl' => Yii::$app->homeUrl,
-    'options' => [
-        'class' => 'navbar navbar-default',
-    ],
-]);
-/* @var $user yii\web\User */
-$user = Yii::$app->user;
-$username = !$user->isGuest ? $user->identity->username : '';
-echo Nav::widget([
-    'options' => ['class' => 'navbar-nav navbar-right'],
-    'items' => [
-        ['label' => 'Home', 'url' => ['/word/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Signup', 'url' => ['/site/signup'], 'visible' => $user->isGuest],
-        ['label' => 'Login', 'url' => ['/site/login'], 'visible' => $user->isGuest],
-        ['label' => "Logout ($username)", 'url' => ['/site/logout'], 'visible' => !$user->isGuest,
-            'linkOptions' => ['data-method' => 'post'],
+    <?php NavBar::begin([
+        'brandLabel' => Html::encode(Yii::$app->name),
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => 'navbar navbar-default',
         ],
-    ],
-]);
-NavBar::end();
-?>
+    ]) ?>
+        <?= Nav::widget([
+            'options' => ['class' => 'navbar-nav navbar-right'],
+            'items' => [
+                ['label' => 'Home', 'url' => ['/word/index']],
+                ['label' => 'About', 'url' => ['/site/about']],
+                ['label' => 'Signup', 'url' => ['/site/signup'], 'visible' => $user->isGuest],
+                ['label' => 'Login', 'url' => ['/site/login'], 'visible' => $user->isGuest],
+                ['label' => "Logout ($username)", 'url' => ['/site/logout'], 'visible' => !$user->isGuest,
+                    'linkOptions' => ['data-method' => 'post'],
+                ],
+            ],
+        ]) ?>
+    <?php NavBar::end() ?>
 
-<?= ToastrFlash::widget() ?>
-
-<div class="container">
-    <?= $content ?>
-</div>
-
-<footer class="footer">
-    <div class="text-center">
-        &copy; <?= (new Datetime)->format('Y') ?> Tomoki Morita.
-        <?= Yii::powered() ?>
-        version: <?= Yii::getVersion() ?>
-        mode: <?= YII_ENV ?>
+    <div class="container">
+        <?= ToastrFlash::widget() ?>
+        <?= $content ?>
     </div>
-</footer>
+
+    <footer class="footer">
+        <div class="text-center">
+            &copy; <?= (new Datetime)->format('Y') ?> Tomoki Morita.
+            <?= Yii::powered() ?>
+            version: <?= Yii::getVersion() ?>
+            mode: <?= YII_ENV ?>
+        </div>
+    </footer>
+
+    <?= Html::jsFile('@web/js/common.js?v=' . filemtime(Yii::getAlias('@webroot/js/common.js'))) ?>
+
 <?php $this->endBody() ?>
 <?php if (YII_ENV_DEV): ?>
     <?= $this->render('/common/browser-sync') ?>
