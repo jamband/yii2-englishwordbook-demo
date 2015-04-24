@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8fb49ae8f6f7e35f3999f02e821415d1",
+    "hash": "990fceb53c2a94f4d5c7f66011ca536c",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -345,7 +345,7 @@
         },
         {
             "name": "odaialali/yii2-toastr",
-            "version": "dev-master",
+            "version": "1.0b",
             "source": {
                 "type": "git",
                 "url": "https://github.com/odai-alali/yii2-toastr.git",
@@ -2525,7 +2525,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "odaialali/yii2-toastr": 20,
+        "odaialali/yii2-toastr": 10,
         "jamband/yii2-schemadump": 20
     },
     "prefer-stable": false,

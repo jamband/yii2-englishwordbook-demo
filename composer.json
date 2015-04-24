@@ -1,15 +1,9 @@
 {
-    "name": "English wordbook with Yii 2 framework",
-    "description": "This is a demo application with Yii 2 framework",
-    "keywords": ["yii2", "demo"],
-    "type": "project",
-    "license": "MIT",
-    "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "2.0.3",
         "yiisoft/yii2-bootstrap": "2.0.3",
-        "odaialali/yii2-toastr": "dev-master"
+        "odaialali/yii2-toastr": "1.0b"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "2.0.3",
@@ -18,9 +12,6 @@
         "yiisoft/yii2-faker": "2.0.3",
         "codeception/codeception": "2.0.11",
         "jamband/yii2-schemadump": "dev-master"
-    },
-    "config": {
-        "process-timeout": 1800
     },
     "extra": {
         "asset-installer-paths": {
