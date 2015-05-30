@@ -19,7 +19,7 @@ $username = !$user->isGuest ? $user->identity->username : '';
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?= Html::encode($this->title . ' - ' . Yii::$app->name) ?></title>
+    <title><?= Html::encode($this->title) ?></title>
     <?= Html::csrfMetaTags() ?>
     <?= Html::cssFile('@web/css/common.css?v=' . filemtime(Yii::getAlias('@webroot/css/common.css'))) ?>
     <?= Html::cssFile('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') ?>

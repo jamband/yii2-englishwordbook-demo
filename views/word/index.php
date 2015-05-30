@@ -19,7 +19,7 @@ $(document).ajaxComplete(function() {
 JS
 );
 
-$this->title = 'Home';
+$this->title = 'Home - ' . Yii::$app->name;
 ?>
 <?= $this->render('_action', ['items' => [
     ['label' => 'Create', 'url' => ['create']],

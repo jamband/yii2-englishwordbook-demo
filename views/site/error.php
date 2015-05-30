@@ -14,7 +14,7 @@ if ($exception->statusCode === 405) {
     $message = '不正なリクエストです。';
 }
 
-$this->title = $name . ' - ' . Yii::$app->name;
+$this->title = "$name . - " . Yii::$app->name;
 ?>
 <h1><?= Html::encode($name) ?></h1>
 

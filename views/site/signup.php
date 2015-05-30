@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Singup';
+$this->title = 'Singup - ' . Yii::$app->name;
 ?>
 <h1>新規ユーザ登録</h1>
 

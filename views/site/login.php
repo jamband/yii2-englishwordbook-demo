@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
+$this->title = 'Login - ' - Yii::$app->name;
 ?>
 <?php $form = ActiveForm::begin(); ?>
     <?= $form->errorSummary($loginForm) ?>

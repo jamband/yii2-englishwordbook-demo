@@ -6,7 +6,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ButtonDropdown;
 
-$this->title = "Update $word->en";
+$this->title = "Update $word->en - " . Yii::$app->name;
 ?>
 
 <?= $this->render('_action', ['items' => [
