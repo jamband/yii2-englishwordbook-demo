@@ -1,8 +1,3 @@
-.hint-block {
-    display: block;
-    margin-top: 5px;
-    color: #999;
-}
 .error-summary {
     color: @state-danger-text;
     background: @state-danger-bg;
@@ -10,4 +5,15 @@
     padding: @alert-padding;
     border-radius: @alert-border-radius;
     margin: 0 0 15px 0;
+}
+.required {
+  label:after {
+    content: " *";
+    color: darken(red, 10%);
+  }
+}
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
 }

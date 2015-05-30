@@ -33,21 +33,19 @@ class SignupForm extends Model
     public function rules()
     {
         return [
-            ['username', 'match', 'pattern' => '/^[a-zA-Z0-9\_]{4,20}$/', 'skipOnEmpty' => false,
+            [['username', 'email', 'password', 'password_repeat'], 'required'],
+            [['username', 'email', 'password', 'password_repeat'], 'trim'],
+            [['username'], 'match', 'pattern' => '/^[a-zA-Z0-9\_]{4,20}$/',
                 'message' => '{attribute}が正しくありません。',
             ],
-            ['username', 'unique', 'targetClass' => 'app\models\User',
+            [['username', 'email'], 'unique', 'targetClass' => 'app\models\User',
                 'message' => 'その{attribute}はご利用になれません。',
             ],
-            ['email', 'email', 'skipOnEmpty' => false],
-            ['email', 'unique', 'targetClass' => 'app\models\User',
-                'message' => 'その{attribute}はご利用になれません。',
-            ],
-            ['password', 'match', 'pattern' => '/^[a-zA-Z0-9\_]{8,60}$/', 'skipOnEmpty' => false,
+            [['email'], 'email'],
+            [['password'], 'match', 'pattern' => '/^[a-zA-Z0-9\_]{8,60}$/',
                 'message' => '{attribute}が正しくありません。',
             ],
-            ['password_repeat', 'required'],
-            ['password_repeat', 'compare', 'compareAttribute' => 'password'],
+            [['password_repeat'], 'compare', 'compareAttribute' => 'password'],
         ];
     }
 
