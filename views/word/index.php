@@ -5,10 +5,8 @@
 /* @var $models app\models\Word */
 
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\widgets\LinkPager;
 use yii\widgets\Pjax;
-use yii\bootstrap\ButtonDropdown;
 
 $this->title = 'Home - ' . Yii::$app->name;
 ?>
@@ -20,11 +18,15 @@ $this->title = 'Home - ' . Yii::$app->name;
     <?= $this->render('_sort') ?>
 
     <div class="text-right">
-         <span class="label label-info"><?= Html::encode($pagination->totalCount) ?> results</span>
+         <span class="label label-info">
+            <?= Html::encode($pagination->totalCount) ?> results
+        </span>
     </div>
 
     <div class="text-center">
-        <?= LinkPager::widget(compact('pagination')) ?>
+        <?= LinkPager::widget([
+            'pagination' => $pagination,
+        ]) ?>
     </div>
 
     <div class="words">
@@ -39,12 +41,12 @@ $this->title = 'Home - ' . Yii::$app->name;
             <?= Html::a('Delete', ['delete', 'id' => $model->id], ['data' => [
                 'confirm' => 'この項目を削除してもよろしいですか？',
                 'method' => 'post',
+                'data-pjax' => '0',
             ]]) ?>
             <br>
-        <?php endforeach; ?>
+        <?php endforeach ?>
     </div>
 <?php Pjax::end() ?>
-
 <p class="clearfix"></p>
 
 <div class="row">
