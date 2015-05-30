@@ -1,23 +1,23 @@
 .words {
-    padding: 0 0 10px 40px;
-    line-height: 1.6;
+  padding: 0 0 10px 40px;
+  line-height: 1.6;
 }
 .words {
-    .word,
-    a {
-        margin-right: 10px;
+  .word,
+  a {
+    margin-right: 10px;
+  }
+  .word {
+    color: @text-color;
+  }
+  a {
+    &:link,
+    &:visited {
+      color: @body-bg;
     }
-    .word {
-        color: @text-color;
+    &:hover,
+    &:active, {
+      color: @brand-primary;
     }
-    a {
-        &:link,
-        &:visited {
-            color: @body-bg;
-        }
-        &:hover,
-        &:active, {
-            color: @brand-primary;
-        }
-    }
+  }
 }
