@@ -10,15 +10,6 @@ use yii\widgets\LinkPager;
 use yii\widgets\Pjax;
 use yii\bootstrap\ButtonDropdown;
 
-// twbs popover
-$this->registerJs(<<<'JS'
-$('[data-toggle="popover"]').popover();
-$(document).ajaxComplete(function() {
-    $('[data-toggle="popover"]').popover();
-});
-JS
-);
-
 $this->title = 'Home - ' . Yii::$app->name;
 ?>
 <?= $this->render('_action', ['items' => [
@@ -74,3 +65,12 @@ $this->title = 'Home - ' . Yii::$app->name;
         <?= Html::endForm() ?>
     </div>
 </div>
+
+<?php
+// twbs popover
+$this->registerJS(<<<'JS'
+$(document).on('ready pjax:success', function() {
+    $('[data-toggle="popover"]').popover();
+});
+JS
+);
