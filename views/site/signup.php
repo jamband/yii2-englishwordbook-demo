@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
-/* @var $signupForm app\models\SignupForm */
+/* @var $model app\models\SignupForm */
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
@@ -15,21 +15,21 @@ $this->title = 'Singup - ' . Yii::$app->name;
     'enableClientScript' => false,
     'fieldConfig' => ['enableError' => false],
 ]) ?>
-    <?= $form->errorSummary($signupForm) ?>
+    <?= $form->errorSummary($model) ?>
 
     <div class="row">
         <div class="col-sm-8">
-            <?= $form->field($signupForm, 'username')
+            <?= $form->field($model, 'username')
                 ->hint('半角英数字とアンダースコア(_)のみで 4 から 20 文字まで')
             ?>
-            <?= $form->field($signupForm, 'email')
+            <?= $form->field($model, 'email')
                 ->hint('現在お使いのメールアドレス')
             ?>
-            <?= $form->field($signupForm, 'password')
+            <?= $form->field($model, 'password')
                 ->passwordInput()
                 ->hint('半角英数字とアンダースコア(_)のみで 8 から 60 文字まで')
             ?>
-            <?= $form->field($signupForm, 'password_repeat')
+            <?= $form->field($model, 'password_repeat')
                 ->passwordInput()
                 ->hint('パスワード確認のため、再度入力してください。')
             ?>

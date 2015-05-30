@@ -56,9 +56,13 @@ class WordController extends Controller
         } else {
             $query->search($search);
         }
-        list($pagination, $words) = $this->pages($query, Yii::$app->params['wordPerPage']);
+        list($pagination, $models) = $this->pages($query, Yii::$app->params['wordPerPage']);
 
-        return $this->render('index', compact('search', 'pagination', 'words'));
+        return $this->render('index', [
+            'search' => $search,
+            'pagination' => $pagination,
+            'models' => $models,
+        ]);
     }
 
     /**
@@ -67,13 +71,15 @@ class WordController extends Controller
      */
     public function actionCreate()
     {
-        $word = new Word;
+        $model = new Word();
 
-        if ($word->load(Yii::$app->request->post()) && $word->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', '英単語の追加が完了いたしました。');
             return $this->redirect(['index']);
         }
-        return $this->render('create', compact('word'));
+        return $this->render('create', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -83,13 +89,15 @@ class WordController extends Controller
      */
     public function actionUpdate($id)
     {
-        $word = $this->findModel($id);
+        $model = $this->findModel($id);
 
-        if ($word->load(Yii::$app->request->post()) && $word->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', '英単語の更新が完了いたしました。');
             return $this->redirect(['index']);
         }
-        return $this->render('update', compact('word'));
+        return $this->render('update', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -113,14 +121,14 @@ class WordController extends Controller
      */
     private function findModel($id)
     {
-        $word = Word::find()->userId(Yii::$app->user->id)
+        $model = Word::find()->userId(Yii::$app->user->id)
             ->andWhere(['id' => $id])
             ->limit(1)
             ->one();
 
-        if ($word === null) {
+        if ($model === null) {
             throw new NotFoundHttpException('データがありません。');
         }
-        return $word;
+        return $model;
     }
 }

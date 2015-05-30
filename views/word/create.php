@@ -1,7 +1,7 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $word app\models\Word */
+/* @var $model app\models\Word */
 
 use yii\helpers\Html;
 
@@ -13,4 +13,6 @@ $this->title = 'Create Word';
 ]]) ?>
 <p class="clearfix"></p>
 
-<?= $this->render('_form', compact('word')) ?>
+<?= $this->render('_form', [
+    'model' => $model,
+]);

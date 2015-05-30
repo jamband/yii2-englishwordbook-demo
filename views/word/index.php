@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $pagination yii\data\Pagination */
-/* @var $words app\models\Word */
+/* @var $models app\models\Word */
 
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -37,16 +37,16 @@ $this->title = 'Home - ' . Yii::$app->name;
     </div>
 
     <div class="words">
-        <?php foreach ($words as $word): ?>
-            <?= Html::tag('span', Html::encode($word->en), [
+        <?php foreach ($models as $model): ?>
+            <?= Html::tag('span', Html::encode($model->en), [
                 'class' => 'word',
-                'data-content' => Html::encode($word->ja),
+                'data-content' => Html::encode($model->ja),
                 'data-toggle' => 'popover',
                 'data-trigger' => 'hover',
             ]) ?>
-            <?= Html::a('Update', ['update', 'id' => $word->id], ['data-pjax' => '0']) ?>
-            <?= Html::a('Delete', ['delete', 'id' => $word->id], ['data' => [
-                'confirm' => Yii::$app->params['confirmDelete'],
+            <?= Html::a('Update', ['update', 'id' => $model->id], ['data-pjax' => '0']) ?>
+            <?= Html::a('Delete', ['delete', 'id' => $model->id], ['data' => [
+                'confirm' => 'この項目を削除してもよろしいですか？',
                 'method' => 'post',
             ]]) ?>
             <br>

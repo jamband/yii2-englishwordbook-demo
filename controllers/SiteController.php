@@ -71,12 +71,14 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        $loginForm = new LoginForm();
+        $model = new LoginForm();
 
-        if ($loginForm->load(Yii::$app->request->post()) && $loginForm->login()) {
+        if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
-        return $this->render('login', compact('loginForm'));
+        return $this->render('login', [
+            'model' => $model,
+        ]);
     }
 
     /**
@@ -104,10 +106,10 @@ class SiteController extends Controller
      */
     public function actionSignup()
     {
-        $signupForm = new SignupForm;
+        $model = new SignupForm();
 
-        if ($signupForm->load(Yii::$app->request->post())) {
-            $user = $signupForm->signup();
+        if ($model->load(Yii::$app->request->post())) {
+            $user = $model->signup();
 
             if ($user !== null) {
                 if (Yii::$app->user->login($user)) {
@@ -116,6 +118,8 @@ class SiteController extends Controller
                 }
             }
         }
-        return $this->render('signup', compact('signupForm'));
+        return $this->render('signup', [
+            'model' => $model,
+        ]);
     }
 }
