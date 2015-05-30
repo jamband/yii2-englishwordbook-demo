@@ -6,7 +6,7 @@ Yii::$classMap['yii\helpers\Html'] = '@app/helpers/Html.php';
 
 return [
     'name' => 'English Wordbook',
-    'language' => 'ja',
+    'language' => 'ja-JP',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
