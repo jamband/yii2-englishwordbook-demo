@@ -3,8 +3,6 @@
 /* @var $this yii\web\View */
 /* @var $model app\models\Word */
 
-use yii\helpers\Html;
-
 $this->title = 'Create Word';
 ?>
 

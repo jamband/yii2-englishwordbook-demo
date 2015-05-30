@@ -4,7 +4,6 @@ namespace app\helpers;
 
 use Yii;
 use yii\data\Pagination;
-use yii\helpers\Url;
 
 trait Web
 {

@@ -5,7 +5,6 @@ namespace app\models;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
 use yii\behaviors\BlameableBehavior;
-use app\helpers\TextCleaner;
 
 /**
  * Word class file.

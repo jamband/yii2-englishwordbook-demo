@@ -3,9 +3,6 @@
 /* @var $this yii\web\View */
 /* @var $model app\models\Word */
 
-use yii\helpers\Html;
-use yii\bootstrap\ButtonDropdown;
-
 $this->title = "Update $model->en - " . Yii::$app->name;
 ?>
 
