@@ -3,11 +3,11 @@
 namespace app\controllers;
 
 use Yii;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
+use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
-use app\helpers\Web;
+use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 use app\models\Word;
 
 /**
@@ -15,8 +15,6 @@ use app\models\Word;
  */
 class WordController extends Controller
 {
-    use Web;
-
     /**
      * @inheritdoc
      */
@@ -49,19 +47,27 @@ class WordController extends Controller
      */
     public function actionIndex($sort = null, $search = null)
     {
-        $query = Word::find()->userId(Yii::$app->user->id);
+        $query = Word::find()
+            ->userId(Yii::$app->user->id);
 
         if ($search === null) {
             $query->sort($sort);
         } else {
             $query->search($search);
         }
-        list($pagination, $models) = $this->pages($query, Yii::$app->params['wordPerPage']);
+
+        $provider = new ActiveDataProvider([
+            'query' => $query,
+            'sort' => false,
+            'pagination' => [
+                'pageSize' => Yii::$app->params['wordPerPage'],
+            ],
+        ]);
+        $provider->prepare(true);
 
         return $this->render('index', [
+            'provider' => $provider,
             'search' => $search,
-            'pagination' => $pagination,
-            'models' => $models,
         ]);
     }
 
