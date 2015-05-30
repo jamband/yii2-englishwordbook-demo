@@ -18,7 +18,7 @@ chmod 777 runtime web/assets
 ```
 
 ## データベースの設定
-まず最初に yii2_englishwordbook_demo というデータベースを作成します。今のところ MySQL のみに対応しています。username, password などは config/db.php にて上手く調整してください。完了したら以下を実行します (動作テスト用のデータが data/ にありますので良かったら使ってみてください ) 。
+まず最初に yii2_englishwordbook_demo というデータベースを作成します。今のところ MySQL のみに対応しています。username, password などは config/db.php にて上手く調整してください。完了したら以下を実行します (動作テスト用のデータが migrations/ にありますので良かったら使ってみてください ) 。
 
 ```
 ./yii migrate
