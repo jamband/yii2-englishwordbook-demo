@@ -5,14 +5,6 @@ var del = require('del');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-// font
-gulp.task('font', function() {
-  gulp.src([
-      'vendor/bower/bootstrap/dist/fonts/*'
-  ])
-    .pipe(gulp.dest('web/fonts'));
-});
-
 // js
 gulp.task('js', function() {
   gulp.src([
@@ -64,7 +56,7 @@ gulp.task('clean', del.bind(null, [
 ]));
 
 // build
-gulp.task('build', ['font', 'js', 'style']);
+gulp.task('build', ['js', 'style']);
 
 // default
 gulp.task('default', ['build', 'serve']);
