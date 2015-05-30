@@ -1,25 +1,33 @@
 <?php
 
-$container = \Yii::$container;
+$_ = \Yii::$container;
 
 // yii\behaviors
-$container->set('yii\behaviors\BlameableBehavior', [
+$_->set('yii\behaviors\BlameableBehavior', [
     'createdByAttribute' => 'user_id',
     'updatedByAttribute' => 'user_id',
 ]);
 
 // yii\data
-$container->set('yii\data\Pagination', [
+$_->set('yii\data\Pagination', [
     'pageSizeParam' => false,
 ]);
 
 // yii\widgets
-$container->set('yii\widgets\LinkPager', [
+$_->set('yii\widgets\LinkPager', [
     'maxButtonCount' => 5,
+    'prevPageLabel' => '<i class="fa fa-angle-left"></i>',
+    'nextPageLabel' => '<i class="fa fa-angle-right"></i>',
+    'firstPageLabel' => '<i class="fa fa-angle-double-left"></i>',
+    'lastPageLabel' => '<i class="fa fa-angle-double-right"></i>',
+]);
+
+$_->set('yii\widgets\Pjax', [
+    'scrollTo' => 0,
 ]);
 
 // odaialali\yii2toastr
-$container->set('odaialali\yii2toastr\ToastrFlash', [
+$_->set('odaialali\yii2toastr\ToastrFlash', [
     'options' => [
         'timeOut' => 3600,
     ],
