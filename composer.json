@@ -1,15 +1,15 @@
 {
     "require": {
-        "yiisoft/yii2": "2.0.4",
-        "yiisoft/yii2-bootstrap": "2.0.4",
+        "yiisoft/yii2": "^2.0",
+        "yiisoft/yii2-bootstrap": "^2.0",
         "odaialali/yii2-toastr": "1.0b"
     },
     "require-dev": {
-        "yiisoft/yii2-codeception": "2.0.4",
-        "yiisoft/yii2-debug": "2.0.4",
-        "yiisoft/yii2-gii": "2.0.4",
-        "yiisoft/yii2-faker": "2.0.3",
-        "codeception/codeception": "2.0.14",
+        "yiisoft/yii2-codeception": "^2.0",
+        "yiisoft/yii2-debug": "^2.0",
+        "yiisoft/yii2-gii": "^2.0",
+        "yiisoft/yii2-faker": "^2.0",
+        "codeception/codeception": "^2.1",
         "jamband/yii2-schemadump": "dev-master"
     },
     "extra": {
