@@ -62,8 +62,6 @@ $username = !$user->isGuest ? $user->identity->username : '';
         <div class="text-center">
             &copy; <?= (new Datetime)->format('Y') ?> Tomoki Morita.
             <?= Yii::powered() ?>
-            version: <?= Yii::getVersion() ?>
-            mode: <?= YII_ENV ?>
         </div>
     </footer>
 
