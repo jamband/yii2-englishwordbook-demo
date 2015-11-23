@@ -17,5 +17,10 @@
       "npm-asset-library": "vendor/npm",
       "bower-asset-library": "vendor/bower"
     }
+  },
+  "scripts": {
+    "clean": [
+      "gulp clean >/dev/null 2>&1 || rm -rf runtime/* vendor"
+    ]
   }
 }
