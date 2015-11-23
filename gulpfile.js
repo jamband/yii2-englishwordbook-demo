@@ -17,6 +17,8 @@ gulp.task('js', function() {
   ])
     .pipe($.concat('common.js'))
     .pipe($.uglify({preserveComments: 'some'}))
+    .pipe(gulp.dest('web/js'))
+    .pipe($.gzip())
     .pipe(gulp.dest('web/js'));
 });
 
@@ -31,6 +33,8 @@ gulp.task('style', function() {
     .pipe($.concat('common.css'))
     .pipe($.autoprefixer('last 2 version', 'ie 8'))
     .pipe($.minifyCss())
+    .pipe(gulp.dest('web/css'))
+    .pipe($.gzip())
     .pipe(gulp.dest('web/css'))
     .pipe(reload({stream: true, once: true}));
 });
