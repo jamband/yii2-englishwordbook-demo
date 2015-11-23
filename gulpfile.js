@@ -51,6 +51,7 @@ gulp.task('clean', del.bind(null, [
   'node_modules',
   'runtime/*',
   'tests/codeception/_output/*',
+  'tests/codeception/_support/_generated/*',
   'vendor',
   'web/assets/*'
 ]));
