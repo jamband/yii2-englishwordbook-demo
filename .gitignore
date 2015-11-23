@@ -1,5 +1,5 @@
-node_modules
+/node_modules
 tests/codeception/acceptance/AcceptanceTester.php
 tests/codeception/functional/FunctionalTester.php
 tests/codeception/unit/UnitTester.php
-vendor
+/vendor
