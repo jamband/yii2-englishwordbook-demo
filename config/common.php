@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/container.php';
+require __DIR__.'/container.php';
 
 Yii::$classMap['yii\helpers\Html'] = '@app/helpers/Html.php';
 
@@ -43,7 +43,7 @@ return [
                 ],
             ],
         ],
-        'db' => require __DIR__ . '/db.php',
+        'db' => require __DIR__.'/db.php',
     ],
-    'params' => require __DIR__ . '/params.php',
+    'params' => require __DIR__.'/params.php',
 ];

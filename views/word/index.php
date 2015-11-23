@@ -7,7 +7,7 @@ use yii\helpers\Html;
 use yii\widgets\LinkPager;
 use yii\widgets\Pjax;
 
-$this->title = 'Home - ' . Yii::$app->name;
+$this->title = 'Home - '.Yii::$app->name;
 ?>
 <?= $this->render('_action', ['items' => [
     ['label' => 'Create', 'url' => ['create']],

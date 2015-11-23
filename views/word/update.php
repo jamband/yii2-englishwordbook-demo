@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $model app\models\Word */
 
-$this->title = "Update $model->en - " . Yii::$app->name;
+$this->title = "Update $model->en - ".Yii::$app->name;
 ?>
 
 <?= $this->render('_action', ['items' => [

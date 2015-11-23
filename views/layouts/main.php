@@ -23,7 +23,7 @@ $username = !$user->isGuest ? $user->identity->username : '';
     <title><?= Html::encode($this->title) ?></title>
     <link href="<?= Yii::$app->homeUrl ?>favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <?= Html::cssFile('@web/css/common.css?v=' . filemtime(Yii::getAlias('@webroot/css/common.css'))) ?>
+    <?= Html::cssFile('@web/css/common.css?v='.filemtime(Yii::getAlias('@webroot/css/common.css'))) ?>
     <?php $this->head() ?>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -65,7 +65,7 @@ $username = !$user->isGuest ? $user->identity->username : '';
         </div>
     </footer>
 
-    <?= Html::jsFile('@web/js/common.js?v=' . filemtime(Yii::getAlias('@webroot/js/common.js'))) ?>
+    <?= Html::jsFile('@web/js/common.js?v='.filemtime(Yii::getAlias('@webroot/js/common.js'))) ?>
 
 <?php $this->endBody() ?>
 <?php if (YII_ENV_DEV): ?>

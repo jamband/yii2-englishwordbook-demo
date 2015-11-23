@@ -2,9 +2,9 @@
 
 use yii\helpers\ArrayHelper;
 
-Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
+Yii::setAlias('@tests', dirname(__DIR__).'/tests');
 
-return ArrayHelper::merge(require __DIR__ . '/common.php', [
+return ArrayHelper::merge(require __DIR__.'/common.php', [
     'id' => 'englishwordbook-console',
     'bootstrap' => ['gii'],
     'controllerNamespace' => 'app\commands',

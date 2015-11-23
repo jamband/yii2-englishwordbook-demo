@@ -4,7 +4,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About - ' . Yii::$app->name;
+$this->title = 'About - '.Yii::$app->name;
 ?>
 <h1>このサイトについて</h1>
 

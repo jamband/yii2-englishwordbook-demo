@@ -46,4 +46,4 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = 'yii\gii\Module';
 }
 
-return ArrayHelper::merge(require __DIR__ . '/common.php', $config);
+return ArrayHelper::merge(require __DIR__.'/common.php', $config);
