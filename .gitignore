@@ -2,4 +2,5 @@
 tests/codeception/acceptance/AcceptanceTester.php
 tests/codeception/functional/FunctionalTester.php
 tests/codeception/unit/UnitTester.php
+tests/codeception/_support/_generated/*
 /vendor
