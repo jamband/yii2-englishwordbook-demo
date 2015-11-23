@@ -31,7 +31,7 @@ gulp.task('style', function() {
     .pipe($.plumber())
     .pipe($.less())
     .pipe($.concat('common.css'))
-    .pipe($.autoprefixer('last 2 version', 'ie 8'))
+    .pipe($.autoprefixer({browsers: ['last 2 versions']}))
     .pipe($.minifyCss())
     .pipe(gulp.dest('web/css'))
     .pipe($.gzip())
@@ -51,14 +51,16 @@ gulp.task('serve', function() {
 });
 
 // clean
-gulp.task('clean', del.bind(null, [
-  'node_modules',
-  'runtime/*',
-  'tests/codeception/_output/*',
-  'tests/codeception/_support/_generated/*',
-  'vendor',
-  'web/assets/*'
-]));
+gulp.task('clean', function(cb) {
+  del([
+    'node_modules',
+    'runtime/*',
+    'tests/codeception/_output/*',
+    'tests/codeception/_support/_generated/*',
+    'vendor',
+    'web/assets/*'
+  ], cb);
+});
 
 // build
 gulp.task('build', ['js', 'style']);
