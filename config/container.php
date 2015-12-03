@@ -26,9 +26,10 @@ $_->set('yii\widgets\Pjax', [
     'scrollTo' => 0,
 ]);
 
-// odaialali\yii2toastr
-$_->set('odaialali\yii2toastr\ToastrFlash', [
+// app\widgets\ToastrNotification
+$_->set('app\widgets\ToastrNotification', [
     'options' => [
+        'escapeHtml' => true,
         'timeOut' => 3600,
     ],
 ]);

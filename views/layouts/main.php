@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use odaialali\yii2toastr\ToastrFlash;
+use app\widgets\ToastrNotification;
 
 $user = Yii::$app->user;
 $username = !$user->isGuest ? $user->identity->username : '';
@@ -28,7 +28,7 @@ $username = !$user->isGuest ? $user->identity->username : '';
 </head>
 <body>
 <?php $this->beginBody() ?>
-    <?= ToastrFlash::widget() ?>
+    <?= ToastrNotification::widget() ?>
 
     <?php NavBar::begin([
         'brandLabel' => Html::encode(Yii::$app->name),

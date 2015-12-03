@@ -1,8 +1,7 @@
 {
   "require": {
     "yiisoft/yii2": "^2.0",
-    "yiisoft/yii2-bootstrap": "2.0.4",
-    "odaialali/yii2-toastr": "1.0b"
+    "yiisoft/yii2-bootstrap": "2.0.4"
   },
   "require-dev": {
     "yiisoft/yii2-codeception": "^2.0",
