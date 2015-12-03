@@ -2,6 +2,7 @@
 
 namespace app\widgets;
 
+use Yii;
 use yii\base\InvalidParamException;
 use yii\base\Widget;
 use yii\helpers\Json;
@@ -67,7 +68,9 @@ class Toastr extends Widget
     public function registerClientScript()
     {
         $view = $this->getView();
-        ToastrAsset::register($view);
+        if (false !== Yii::$app->assetManager->bundles) {
+            ToastrAsset::register($view);
+        }
         $view->registerJs("toastr.options = $this->options;");
         $view->registerJs("toastr.$this->type('$this->message', '$this->title');");
     }
