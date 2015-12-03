@@ -25,13 +25,11 @@ $username = !$user->isGuest ? $user->identity->username : '';
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <?= Html::cssFile('@web/css/common.css?v='.filemtime(Yii::getAlias('@webroot/css/common.css'))) ?>
     <?php $this->head() ?>
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
 <?php $this->beginBody() ?>
+    <?= ToastrFlash::widget() ?>
+
     <?php NavBar::begin([
         'brandLabel' => Html::encode(Yii::$app->name),
         'brandUrl' => Yii::$app->homeUrl,
@@ -54,13 +52,12 @@ $username = !$user->isGuest ? $user->identity->username : '';
     <?php NavBar::end() ?>
 
     <div class="container">
-        <?= ToastrFlash::widget() ?>
         <?= $content ?>
     </div>
 
     <footer class="footer">
         <div class="text-center">
-            &copy; <?= (new Datetime)->format('Y') ?> Tomoki Morita.
+            &copy; <?= (new \Datetime)->format('Y') ?> Tomoki Morita.
             <?= Yii::powered() ?>
         </div>
     </footer>
@@ -68,9 +65,11 @@ $username = !$user->isGuest ? $user->identity->username : '';
     <?= Html::jsFile('@web/js/common.js?v='.filemtime(Yii::getAlias('@webroot/js/common.js'))) ?>
 
 <?php $this->endBody() ?>
+
 <?php if (YII_ENV_DEV): ?>
     <?= $this->render('/common/browser-sync') ?>
 <?php endif; ?>
+
 </body>
 </html>
 <?php $this->endPage() ?>

@@ -4,7 +4,7 @@ use yii\helpers\ArrayHelper;
 
 $config = [
     'id' => 'englishwordbook',
-    'defaultRoute' => 'word/index',
+    'defaultRoute' => 'word',
     'components' => [
         'request' => [
             'cookieValidationKey' => 'Uwzhs_7cHYtIBFAI7y4F5SlGX0X4oGLX',

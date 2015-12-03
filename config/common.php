@@ -20,7 +20,6 @@ return [
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
-            // 'class' => 'yii\caching\ApcCache',
             // 'class' => 'yii\caching\MemCache',
             // 'servers' => [
                 // [
