@@ -5,8 +5,8 @@ var del = require('del');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
-// js
-gulp.task('js', function() {
+// scripts
+gulp.task('scripts', function() {
   gulp.src([
     'vendor/bower/jquery/dist/jquery.js',
     'vendor/bower/bootstrap/dist/js/bootstrap.js',
@@ -22,10 +22,10 @@ gulp.task('js', function() {
     .pipe(gulp.dest('web/js'));
 });
 
-// style
-gulp.task('style', function() {
+// styles
+gulp.task('styles', function() {
   gulp.src([
-    'assets/less/_.less',
+    'assets/less/common.less',
     'vendor/bower/toastr/toastr.css',
   ])
     .pipe($.plumber())
@@ -46,7 +46,7 @@ gulp.task('serve', function() {
     sever: {baseDir: 'web'}
   });
 
-  gulp.watch('assets/less/*.less', ['style']);
+  gulp.watch('assets/less/**/*.less', ['styles']);
   gulp.watch('{controllers,views}/**/*.php', reload);
 });
 
@@ -63,7 +63,7 @@ gulp.task('clean', function(cb) {
 });
 
 // build
-gulp.task('build', ['js', 'style']);
+gulp.task('build', ['scripts', 'styles']);
 
 // default
 gulp.task('default', ['build', 'serve']);
