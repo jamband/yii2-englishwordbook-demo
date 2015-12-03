@@ -61,6 +61,9 @@ class Toastr extends Widget
         $this->registerClientScript();
     }
 
+    /**
+     * Registers the needed JavaScript.
+     */
     public function registerClientScript()
     {
         $view = $this->getView();
