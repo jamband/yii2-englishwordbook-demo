@@ -46,27 +46,27 @@ $this->title = 'Home - '.Yii::$app->name;
         <?php endforeach ?>
     </div>
 
-<?php Pjax::end() ?>
-<p class="clearfix"></p>
+    <p class="clearfix"></p>
 
-<div class="row">
-    <div class="col-sm-5 col-sm-offset-7">
-        <?= Html::beginForm([''], 'get') ?>
-            <div class="input-group">
-                <?= Html::textInput('search', $search, [
-                    'class' => 'form-control',
-                    'placeholder' => 'Search',
-                ]) ?>
-                <span class="input-group-btn">
-                    <?= Html::submitButton(Html::icon('search', 'fa'), [
-                        'id' => 'word-search',
-                        'class' => 'btn btn-primary',
+    <div class="row">
+        <div class="col-sm-5 col-sm-offset-7">
+            <?= Html::beginForm([''], 'get', ['data-pjax' => 'true']) ?>
+                <div class="input-group">
+                    <?= Html::textInput('search', $search, [
+                        'class' => 'form-control',
+                        'placeholder' => 'Search',
                     ]) ?>
-                </span>
-            </div>
-        <?= Html::endForm() ?>
+                    <span class="input-group-btn">
+                        <?= Html::submitButton(Html::icon('search', 'fa'), [
+                            'id' => 'word-search',
+                            'class' => 'btn btn-primary',
+                        ]) ?>
+                    </span>
+                </div>
+            <?= Html::endForm() ?>
+        </div>
     </div>
-</div>
+<?php Pjax::end() ?>
 
 <?php
 // twbs popover

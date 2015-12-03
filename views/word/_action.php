@@ -20,7 +20,7 @@ use yii\helpers\Html;
         ],
         'dropdown' => [
             'options' => [
-                'class' => 'pull-right',
+                'class' => 'dropdown-menu-right',
             ],
             'items' => $items,
         ],
