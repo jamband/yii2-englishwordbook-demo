@@ -5,7 +5,6 @@ namespace app\widgets;
 use yii\base\InvalidParamException;
 use yii\base\Widget;
 use yii\helpers\Json;
-use yii\helpers\Html;
 use app\assets\ToastrAsset;
 
 /**
