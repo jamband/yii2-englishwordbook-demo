@@ -21,11 +21,13 @@ $I->amGoingTo('verify pagination');
 $I->amGoingTo('verify sort link');
     $I->click(['link' => 'a']);
     $I->seeInCurrentUrl('word/index?sort=a');
+    $I->wait(1);
     $I->seeElement(IndexPage::$word);
 
 $I->amGoingTo('verify search form');
     $I->fillField(['name' => 'search'], 'ab');
     $I->click(IndexPage::$search);
+    $I->wait(1);
     $I->seeInField(['name' => 'search'], 'ab');
     $I->seeInCurrentUrl('word/index?search=ab');
 
