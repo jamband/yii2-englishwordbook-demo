@@ -57,7 +57,7 @@ $this->title = 'Home - '.Yii::$app->name;
                         'placeholder' => 'Search',
                     ]) ?>
                     <span class="input-group-btn">
-                        <?= Html::submitButton(Html::icon('search', 'fa'), [
+                        <?= Html::submitButton('<i class="fa fa-search"></i>', [
                             'id' => 'word-search',
                             'class' => 'btn btn-primary',
                         ]) ?>

@@ -2,8 +2,6 @@
 
 require __DIR__.'/container.php';
 
-Yii::$classMap['yii\helpers\Html'] = '@app/helpers/Html.php';
-
 return [
     'name' => 'English Wordbook',
     'language' => 'ja-JP',

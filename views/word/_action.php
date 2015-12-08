@@ -9,7 +9,7 @@ use yii\helpers\Html;
 ?>
 <div class="pull-right">
     <?= ButtonDropdown::widget([
-        'label' => Html::icon('list-ul', 'fa'),
+        'label' => '<i class="fa fa-list-ul"></i>',
         'encodeLabel' => false,
         'options' => [
             'id' => 'word-action',
