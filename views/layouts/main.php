@@ -21,7 +21,7 @@ $username = !$user->isGuest ? $user->identity->username : '';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <link href="<?= Yii::$app->homeUrl ?>favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="icon" href="<?= Yii::$app->homeUrl ?>favicon.ico">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <?= Html::cssFile('@web/css/common.css?v='.filemtime(Yii::getAlias('@webroot/css/common.css'))) ?>
     <?php $this->head() ?>
