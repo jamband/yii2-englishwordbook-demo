@@ -1,7 +1,7 @@
 {
   "name": "yii2-englishwordbook-demo",
   "dependencies": {
-    "bootstrap-hover-dropdown": "~2.1.0",
+    "bootstrap-hover-dropdown": "~2.1.3",
     "toastr": "~2.1.2"
   }
 }
