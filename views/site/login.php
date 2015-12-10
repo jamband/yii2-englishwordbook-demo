@@ -9,21 +9,21 @@ use yii\bootstrap\ActiveForm;
 
 $this->title = 'Login - '.Yii::$app->name;
 ?>
-<?php $form = ActiveForm::begin(); ?>
+<?php $form = ActiveForm::begin() ?>
     <?= $form->errorSummary($model) ?>
 
     <div class="row">
-        <div class="col-sm-8">
+        <div class="col-xs-12 col-sm-8">
             <?= $form->field($model, 'username') ?>
             <?= $form->field($model, 'password')->passwordInput() ?>
             <?= $form->field($model, 'rememberMe')->checkbox() ?>
         </div>
-    </div>
+    </div><!-- /.row -->
 
     <div class="form-group">
         <?= Html::submitButton('ログイン', ['class' => 'btn btn-primary']) ?>
     </div>
-<?php ActiveForm::end(); ?>
+<?php ActiveForm::end() ?>
 
 <div class="panel panel-default">
     <div class="panel-heading">以下の 2 つのアカウントでログインできます:</div>

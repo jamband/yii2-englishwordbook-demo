@@ -65,7 +65,7 @@ $this->title = 'Home - '.Yii::$app->name;
                 </div>
             <?= Html::endForm() ?>
         </div>
-    </div>
+    </div><!-- /.row -->
 <?php Pjax::end() ?>
 
 <?php

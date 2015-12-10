@@ -8,7 +8,7 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 
 ?>
-<?php $form = ActiveForm::begin(); ?>
+<?php $form = ActiveForm::begin() ?>
     <div class="row">
         <div class="col-sm-8">
             <?= $form->field($model, 'en')->textInput(['maxlength' => 64]) ?>
@@ -21,4 +21,4 @@ use yii\helpers\Html;
             'class' => 'btn btn-primary',
         ]) ?>
     </div>
-<?php ActiveForm::end(); ?>
+<?php ActiveForm::end() ?>
