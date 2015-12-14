@@ -11,14 +11,14 @@ return [
         'i18n' => [
             'translations' => [
                 'yii' => [
-                    'class' => 'yii\i18n\PhpMessageSource',
+                    'class' => \yii\i18n\PhpMessageSource::class,
                     'basePath' => '@app/messages'
                 ],
             ],
         ],
         'cache' => [
-            'class' => 'yii\caching\FileCache',
-            // 'class' => 'yii\caching\MemCache',
+            'class' => \yii\caching\FileCache::class,
+            // 'class' => \yii\caching\MemCache::class,
             // 'servers' => [
                 // [
                     // 'host' => 'localhost',
@@ -35,7 +35,7 @@ return [
         'log' => [
             'targets' => [
                 [
-                    'class' => 'yii\log\FileTarget',
+                    'class' => \yii\log\FileTarget::class,
                     'levels' => ['error', 'warning'],
                 ],
             ],

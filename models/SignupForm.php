@@ -38,7 +38,7 @@ class SignupForm extends Model
             [['username'], 'match', 'pattern' => '/^[a-zA-Z0-9\_]{4,20}$/',
                 'message' => '{attribute}が正しくありません。',
             ],
-            [['username', 'email'], 'unique', 'targetClass' => 'app\models\User',
+            [['username', 'email'], 'unique', 'targetClass' => User::class,
                 'message' => 'その{attribute}はご利用になれません。',
             ],
             [['email'], 'email'],
