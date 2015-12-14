@@ -11,7 +11,7 @@ Composer などがグローバルにインストールされている場合は�
 
 ```
 cd path/to/project
-git clone git@github.com:jamband/yii2-englishwordbook-demo.git .
+git clone https://github.com/jamband/yii2-englishwordbook-demo.git .
 curl -sS https://getcomposer.org/installer | php
 ./composer.phar update
 chmod 777 runtime web/assets
