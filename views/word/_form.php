@@ -14,7 +14,7 @@ use yii\helpers\Html;
             <?= $form->field($model, 'en')->textInput(['maxlength' => 64]) ?>
             <?= $form->field($model, 'ja')->textInput(['maxlength' => 64]) ?>
         </div>
-    </div>
+    </div><!-- /.row -->
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? '登録する' : '更新する', [

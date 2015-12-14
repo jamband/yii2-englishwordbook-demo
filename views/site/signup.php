@@ -37,7 +37,7 @@ $this->title = 'Singup - '.Yii::$app->name;
                 <?= Html::submitButton('登録', ['class' => 'btn btn-primary']) ?>
             </div>
         </div>
-    </div>
+    </div><!-- /.row -->
 <?php ActiveForm::end() ?>
 
 <div class="panel panel-default">
