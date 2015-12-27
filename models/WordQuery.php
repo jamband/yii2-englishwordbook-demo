@@ -41,7 +41,7 @@ class WordQuery extends ActiveQuery
             $this->orderBy('RAND()');
         }
         if (strlen($sort) === 1) {
-            $this->andFilterWhere(['like', 'en', "$sort%", false])
+            $this->andWhere(['like', 'en', "$sort%", false])
                 ->orderBy(['en' => SORT_ASC]);
         }
 
