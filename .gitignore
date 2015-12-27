@@ -1,3 +1,4 @@
+.idea
 /node_modules
 tests/codeception/acceptance/AcceptanceTester.php
 tests/codeception/functional/FunctionalTester.php
