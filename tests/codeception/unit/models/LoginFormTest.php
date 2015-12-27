@@ -12,7 +12,7 @@ class LoginFormTest extends TestCase
     public function fixtures()
     {
         return [
-            'users' => UserFixture::className(),
+            'users' => UserFixture::class,
         ];
     }
 

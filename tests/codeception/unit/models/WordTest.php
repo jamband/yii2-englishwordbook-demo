@@ -12,7 +12,7 @@ class WordTest extends TestCase
     public function fixtures()
     {
         return [
-            'words' => WordFixture::className(),
+            'words' => WordFixture::class,
         ];
     }
 

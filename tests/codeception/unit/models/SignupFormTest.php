@@ -11,7 +11,7 @@ class SignupFormTest extends DbTestCase
     public function fixtures()
     {
         return [
-            'users' => UserFixture::className(),
+            'users' => UserFixture::class,
         ];
     }
 
