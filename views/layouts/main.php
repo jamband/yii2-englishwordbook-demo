@@ -4,10 +4,10 @@
 /* @var $content string */
 /* @var $user yii\web\User */
 
-use yii\helpers\Html;
+use app\widgets\ToastrNotification;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use app\widgets\ToastrNotification;
+use yii\helpers\Html;
 
 $user = Yii::$app->user;
 $username = !$user->isGuest ? $user->identity->username : '';

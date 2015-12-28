@@ -2,14 +2,15 @@
 
 namespace app\grid;
 
-use Yii;
 use Closure;
+use Yii;
 use yii\helpers\Html;
+use yii\grid\ActionColumn as ActionColumnBase;
 
 /**
  * ActionColumn class file.
  */
-class ActionColumn extends \yii\grid\ActionColumn
+class ActionColumn extends ActionColumnBase
 {
     /**
      * @inheritdoc

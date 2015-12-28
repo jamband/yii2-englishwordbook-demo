@@ -2,13 +2,13 @@
 
 namespace app\controllers;
 
+use app\models\Word;
 use Yii;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use app\models\Word;
 
 /**
  * WordController class file.

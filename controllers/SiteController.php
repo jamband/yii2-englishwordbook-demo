@@ -2,12 +2,13 @@
 
 namespace app\controllers;
 
-use Yii;
-use yii\web\Controller;
-use yii\filters\AccessControl;
-use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\SignupForm;
+use Yii;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
+use yii\web\Controller;
+use yii\web\ErrorAction;
 
 /**
  * SiteController class file.
@@ -60,7 +61,7 @@ class SiteController extends Controller
     {
         return [
             'error' => [
-                'class' => \yii\web\ErrorAction::class,
+                'class' => ErrorAction::class,
             ],
         ];
     }
