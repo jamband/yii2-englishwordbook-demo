@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'class' => \yii\db\Connection::class,
+    'class' => yii\db\Connection::class,
     'dsn' => 'mysql:host=localhost;dbname=yii2_englishwordbook_demo',
     'username' => 'root',
     'password' => getenv('DB_PASS'),

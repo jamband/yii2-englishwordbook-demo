@@ -1,7 +1,5 @@
 <?php
 
-use yii\helpers\ArrayHelper;
-
 $config = [
     'id' => 'englishwordbook',
     'defaultRoute' => 'word',
@@ -10,7 +8,7 @@ $config = [
             'cookieValidationKey' => 'Uwzhs_7cHYtIBFAI7y4F5SlGX0X4oGLX',
         ],
         'user' => [
-            'identityClass' => \app\models\User::class,
+            'identityClass' => app\models\User::class,
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -40,10 +38,10 @@ $config = [
 
 if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
-    $config['modules']['debug'] = \yii\debug\Module::class;
+    $config['modules']['debug'] = yii\debug\Module::class;
 
     $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = \yii\gii\Module::class;
+    $config['modules']['gii'] = yii\gii\Module::class;
 }
 
-return ArrayHelper::merge(require __DIR__.'/common.php', $config);
+return yii\helpers\ArrayHelper::merge(require __DIR__.'/common.php', $config);
