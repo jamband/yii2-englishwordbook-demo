@@ -59,7 +59,7 @@ class Word extends ActiveRecord
      */
     public static function find()
     {
-        return new WordQuery(get_called_class());
+        return new WordQuery(static::class);
     }
 
     /**
