@@ -32,7 +32,7 @@ gulp.task('styles', function() {
     .pipe($.less())
     .pipe($.concat('common.css'))
     .pipe($.autoprefixer({browsers: ['last 2 versions']}))
-    .pipe($.minifyCss())
+    .pipe($.cssnano())
     .pipe(gulp.dest('web/css'))
     .pipe($.gzip())
     .pipe(gulp.dest('web/css'))
