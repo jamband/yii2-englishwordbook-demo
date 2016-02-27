@@ -22,6 +22,9 @@
   "scripts": {
     "clean": [
       "gulp clean >/dev/null 2>&1 || rm -rf runtime/* vendor"
+    ],
+    "show-assets-version": [
+      "composer show -t | grep -o 'bower-asset.*' | sort | uniq"
     ]
   }
 }
