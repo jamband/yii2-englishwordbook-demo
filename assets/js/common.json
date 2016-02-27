@@ -1,0 +1,8 @@
+[
+    "vendor/bower/jquery/dist/jquery.js",
+    "vendor/bower/bootstrap/dist/js/bootstrap.js",
+    "vendor/yiisoft/yii2/assets/**/*.js",
+    "vendor/bower/yii2-pjax/jquery.pjax.js",
+    "vendor/bower/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js",
+    "vendor/bower/toastr/toastr.js"
+]

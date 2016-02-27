@@ -5,14 +5,7 @@ var $ = require('gulp-load-plugins')();
 var del = require('del');
 
 gulp.task('scripts', function() {
-  gulp.src([
-    'vendor/bower/jquery/dist/jquery.js',
-    'vendor/bower/bootstrap/dist/js/bootstrap.js',
-    'vendor/yiisoft/yii2/assets/**/*.js',
-    'vendor/bower/yii2-pjax/jquery.pjax.js',
-    'vendor/bower/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js',
-    'vendor/bower/toastr/toastr.js',
-  ])
+  gulp.src(require('./assets/js/common.json'))
     .pipe($.concat('common.js'))
     .pipe($.uglify({preserveComments: 'some'}))
     .pipe(gulp.dest('web/js'))
@@ -22,10 +15,7 @@ gulp.task('scripts', function() {
 
 // styles
 gulp.task('styles', function() {
-  gulp.src([
-    'assets/less/common.less',
-    'vendor/bower/toastr/toastr.css',
-  ])
+  gulp.src('assets/less/common.less')
     .pipe($.plumber())
     .pipe($.less())
     .pipe($.concat('common.css'))
