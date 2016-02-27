@@ -17,6 +17,9 @@ curl -sS https://getcomposer.org/installer | php
 chmod 777 runtime web/assets
 ```
 
+[Composer Asset Plugin](https://github.com/francoispluchino/composer-asset-plugin) は使用していません。  
+ グローバルにインストールしている場合は、削除する必要があります。詳しくは [Yii 2.0.x で Composer Asset Plugin を使わないでアプリを作っていく方法](http://qiita.com/livejam_db/items/70d674d0d735038ef93f) を参考してみて下さい。
+
 ## データベースの設定
 まず最初に yii2_englishwordbook_demo というデータベースを作成します。今のところ MySQL のみに対応しています。username, password などは config/db.php にて上手く調整してください。完了したら以下を実行します (動作テスト用のデータが migrations/ にありますので良かったら使ってみてください ) 。
 
