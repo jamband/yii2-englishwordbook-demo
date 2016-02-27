@@ -1,11 +1,9 @@
-// include, init
+'use strict';
+
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var del = require('del');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
 
-// scripts
 gulp.task('scripts', function() {
   gulp.src([
     'vendor/bower/jquery/dist/jquery.js',
@@ -35,35 +33,16 @@ gulp.task('styles', function() {
     .pipe($.cssnano())
     .pipe(gulp.dest('web/css'))
     .pipe($.gzip())
-    .pipe(gulp.dest('web/css'))
-    .pipe(reload({stream: true, once: true}));
+    .pipe(gulp.dest('web/css'));
 });
 
-// synchronised browser, watch
-gulp.task('serve', function() {
-  browserSync({
-    notify: false,
-    sever: {baseDir: 'web'}
-  });
+gulp.task('clean', function() {
+  del(['node_modules', 'runtime/*', 'vendor', 'web/assets/*']);
+});
 
+gulp.task('build', ['scripts', 'styles']);
+
+gulp.task('default', ['build'], function() {
   gulp.watch('assets/less/**/*.less', ['styles']);
   gulp.watch('{controllers,views}/**/*.php', reload);
 });
-
-// clean
-gulp.task('clean', function(cb) {
-  del([
-    'node_modules',
-    'runtime/*',
-    'tests/codeception/_output/*',
-    'tests/codeception/_support/_generated/*',
-    'vendor',
-    'web/assets/*'
-  ], cb);
-});
-
-// build
-gulp.task('build', ['scripts', 'styles']);
-
-// default
-gulp.task('default', ['build', 'serve']);

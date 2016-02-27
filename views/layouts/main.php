@@ -66,10 +66,6 @@ $username = !$user->isGuest ? $user->identity->username : '';
 
 <?php $this->endBody() ?>
 
-<?php if (YII_ENV_DEV): ?>
-    <?= $this->render('/common/browser-sync') ?>
-<?php endif ?>
-
 </body>
 </html>
 <?php $this->endPage() ?>
