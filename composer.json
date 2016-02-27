@@ -11,11 +11,13 @@
     "codeception/codeception": "^2.1",
     "jamband/yii2-schemadump": "^0.9"
   },
-  "extra": {
-    "asset-installer-paths": {
-      "npm-asset-library": "vendor/npm",
-      "bower-asset-library": "vendor/bower"
-    }
+  "provide": {
+    "bower-asset/jquery": "*",
+    "bower-asset/jquery.inputmask": "*",
+    "bower-asset/punycode": "*",
+    "bower-asset/yii2-pjax": "*",
+    "bower-asset/bootstrap": "*",
+    "bower-asset/typeahead.js": "*"
   },
   "scripts": {
     "clean": [
