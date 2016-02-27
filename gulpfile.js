@@ -13,7 +13,6 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('web/js'));
 });
 
-// styles
 gulp.task('styles', function() {
   gulp.src('assets/less/common.less')
     .pipe($.plumber())
